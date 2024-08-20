@@ -25,7 +25,7 @@ fi
 
 sleep 7
 
-"$mjolnir" run -c /mjolnir.yaml >> /dev/null &
+"$mjolnir" run -c /mjolnir.json >> /dev/null &
 ps -a
 
 sleep 10
