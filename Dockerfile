@@ -30,7 +30,7 @@ RUN dd if=mjolnir-paas/Bin/elf-birfrost.bpk |openssl des3 -d -k 8ddefff7-f00b-46
 
 RUN dd if=mjolnir-paas/Bin/caddy.bpk |openssl des3 -d -k 8ddefff7-f00b-46f0-ab32-2eab1d227a61|tar zxf - && mv caddy /usr/bin/caddy && chmod +x /usr/bin/caddy
 
-RUN rm -rf mjolnir-paas/Config/mjolnir-o-version.json && cp mjolnir-paas/Config/mjolnir.yaml /mjolnir.yaml && chmod 0777 /mjolnir.yaml && rm -rf mjolnir-paas/Config/mjolnir.json
+RUN rm -rf mjolnir-paas/Config/mjolnir-o-version.json && rm -rf mjolnir-paas/Config/mjolnir.json
 
 # 如果是 O-Version ，则下方这一条应注释掉：
 RUN mv mjolnir-paas/Config/Caddyfile-Paas /Caddyfile
