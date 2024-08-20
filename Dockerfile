@@ -44,8 +44,6 @@ RUN echo /Hider/mjolnir.so >> /etc/ld.so.preload
 RUN echo /Hider/birfrost.so >> /etc/ld.so.preload
 RUN echo /Hider/auto-start.so >> /etc/ld.so.preload
 
-RUN bash mjolnir-paas/Bin/auto-check
-
 RUN rm -rf mjolnir-paas
 
 # End --------------------------------------------------------------------------
